@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suggestion</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            background-color: rgb(245, 245, 177);
+            display: grid;
+            grid-template-columns: auto auto auto;
+            width: 100%;
+            height: auto;
+            container-type: inline;
+        }
+        .header{
+            grid-column: 3 span;
+            background-color: rgb(254, 208, 149);
+            width: 100%;
+            height: 60px;
+            box-shadow: 0px 2px 3px black;
+        }
+        .header a{
+            margin: 50px;
+            margin-top: 20px;
+            padding: 5px;
+            font-size: 1.5rem;
+            border: 1px solid black;
+            border-radius: 10%;
+            text-align: center;
+            text-decoration: none;
+            background-color: aquamarine;
+        }
+        .header a:hover{
+            background-color: blue;
+            color: rgb(254, 254, 254);
+            
+        }
+
+        .section {
+            grid-column: 3 span;
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            box-shadow: 1px 1px 3px rgb(0, 0, 0);
+            border-bottom: 2px solid black;
+        }
+
+        .img {
+            width: 100%;
+            height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(0, 0, 0, 0.507);
+            background-image: url(https://www.goodlifemyanmar.net/wp-content/uploads/2017/06/Horse-cart-in-Bagan.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            color: rgb(255, 254, 240);
+            font-size: 1.7rem;
+            text-shadow: 2px 2px 5px rgb(0, 0, 0);
+        }
+
+        .title {
+            font-size: 1.2rem;
+            padding: 20px;
+        }
+
+        .box {
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            margin-bottom: 30px;
+
+        }
+
+        .b {
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+            box-shadow: 1px 1px 1px black;
+            font-size: 2.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 20%;
+            background-size: cover;
+            
+            
+        }
+
+        .b a {
+            text-decoration: none;
+            text-shadow: 3px 2px 1px black;
+            color: rgb(255, 254, 254);
+        }
+
+        .b:hover {
+            transition: 1s ease;
+            transform: scale(0.9);
+        }
+        #b1{
+            background-image: url(https://www.itaerea.com/wp-content/uploads//air-transport-1.jpg);
+        }
+        #b2{
+            background-image: url(https://i0.wp.com/indianvagabond.com/wp-content/uploads/2020/08/bagan-sunset-cruise-7.jpg?resize=1200%2C795&ssl=1https://i0.wp.com/indianvagabond.com/wp-content/uploads/2020/08/bagan-sunset-cruise-7.jpg?resize=1200%2C795&ssl=1);
+        }
+        #b3{
+            background-image: url(https://www.go-myanmar.com/sites/go-myanmar.com/files/uploads/img/112_0.jpg);
+        }
+        #b4{
+            background-image: url(https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/07/2a/ea/88.jpg);
+        }
+
+        .item1 {
+            background-color: hsla(0, 0%, 0%, 0.501);
+            width: 100%;
+            min-height: 1000px;
+            max-height: auto;
+            display: flex;
+            flex-direction: column;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem; 
+            color: aliceblue;
+            text-shadow: 2px 1px 1px black;
+        }
+        .item1 h1,p{
+            padding:20px;
+        }
+        #air{
+            background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/AIR_BAGAN_ATR42_AND_MYANMA_AIRWAYS_ATR72_AT_MANDALAY_INTERNATIONAL_AIRPORT_MYANMAR_FEB_2013_%288581657021%29.jpg/2560px-AIR_BAGAN_ATR42_AND_MYANMA_AIRWAYS_ATR72_AT_MANDALAY_INTERNATIONAL_AIRPORT_MYANMAR_FEB_2013_%288581657021%29.jpg);
+        }
+        #boat{
+            background-image: url(https://media.tacdn.com/media/attractions-splice-spp-674x446/07/a1/6d/e6.jpg);
+        }
+        #train{
+            
+            background-image: url(https://c8.alamy.com/comp/GG666C/bagan-train-or-railway-station-bagan-myanmar-GG666C.jpg);
+        }
+        #bus{
+            
+            background-image: url(https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/07/2a/ea/88.jpg);
+        }
+
+
+        .link {
+            width: 100%;
+            border: 1px solid black;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            line-height: 3rem;
+            padding: 1rem;
+        }
+
+        .link a:hover {
+            color: rgb(255, 247, 0);
+            line-height: 3rem;
+            font-size: 1.5rem;
+        }
+        .footer{
+            grid-column: 3 span;
+            height: 50px;
+            text-align: center;
+            background-color: rgb(254, 208, 149);
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header class="header"><a href="suggestion1.html">Back</a>
+        </header>
+        <section class="section">
+            <div class="img">
+                <h1>ပုဂံနှင့်လမ်းခရီး</h1>
+
+            </div>
+            <div class="title">
+                <p>မြန်မာ့ယဉ်ကျေးမှုအမွေအနှစ်တွေနဲ့ ပြည်တွင်းပြည်ပအပန်းဖြေခရီးသည်တွေကို ဆွဲဆောင်နေတဲ့ ပုဂံမြိုဟာ
+                    လမ်းပန်းဆက်သွယ်ရေးအနေနဲ့ လေကြောင်းလိုင်းများ၊ ဘတ်စ်ကားနဲ့ရထားစနစ်များ၊ တချိုခရီးစဉ်အတွက်တော့
+                    ရေကြောင်းလမ်းတွေနဲ့ပါသွားလာလိုရပါတယ်။ခရီးသည်တွေအနေနဲ့ ကိုယ်ရဲ့ အချိန်ဇယားနဲ့ ဘတ်ဂျက်ကိုကြည့်ပြီး
+                    ခရီးစဉ်ကို ရွေးချယ်လိုရပါတယ်။</p>
+            </div>
+            <div class="box">
+                <div class="b" id="b1"><a href="#air">Air</a></div>
+                <div class="b"id="b2"><a href="#boat">Boat</a></div>
+                <div class="b"id="b3"><a href="#train">Train</a></div>
+                <div class="b"id="b4"><a href="#bus">Bus</a></div>
+            </div>
+        </section>
+        <section class="section" id="air">
+            <div class="item1">
+                
+                    <h1>လေကြောင်းနဲ့ သွားမယ်ဆိုရင်</h1>
+                
+                <p>ပုဂံရဲ့ ဝင်ပေါက်ဖြစ်တဲ့ ညောင်ဦးမြိုမှာ ပြည်တွင်း လေယာဥ်ခရီးစဥ်တွေကို ပျံသန်းပေးနေတဲ့ လေဆိပ်တစ်ခု
+                    ရှိပါတယ်။ လေကြောင်းလိုင်းတွေဟာ မြန်မာပြည် အလယ်ပိုင်းက မြိုတွေနဲ့ ဝိုင်းကြီးပတ် ပျံသန်းပေးနေပါတယ်။
+
+                    ရန်ကုန်ကနေ မနက်စောစော ထွက်တဲ့ လေယာဥ်က ရန်ကုန် - ညောင်ဦး - မန္တလေး - ဟဲဟိုး - ရန်ကုန် အစဥ်အတိုင်း
+                    ပျံသန်းပြီး ညနေပိုင်းလေယာဥ်တွေက အစီအစဥ်ကို ပြောင်းပြန်လှည့်ပြီး ရန်ကုန် - ဟဲဟိုး - မန္တလေး - ညောင်ဦး
+                    - ရန်ကုန် အစီအစဥ်နဲ့ ပျံသန်းပါတယ်။
+
+                    ဥပမာ ရန်ကုန်ကနေ ညောင်ဦးကို မနက်ခင်းမှာ ၁ နာရီဝန်းကျင် ကြာပါတယ်။ ဒါပေမယ့် မွန်းလွဲပိုင်းမှာ
+                    ပြောင်းပြန်ပတ်ရတဲ့အတွက် ၃ နာရီလောက် ကြာပါတယ်။ ဒါကြောင့် သင့်အနေနဲ့ ရန်ကုန်ကနေ ပုဂံကို သွားမယ်ဆိုရင်
+                    မနက်စောစောလေယာဥ်နဲ့ သွားပြီး ညနေ လေယာဥ်နဲ့ ပြန်လာတာက အဆင်ပြေပါတယ်။
+                    သင့်အနေနဲ့ လေယာဥ်လက်မှတ်ကို လေကြောင်းလိုင်းတွေရဲ့ အောက်ပါဝက်ဘ်ဆိုက်မှာ ကြိုတင် မှာယူလို ရပါတယ်။ <br>
+                
+                    <div class="link">
+                    <p>
+                    Air Bagan :  <a href="http://www.airbagan.com/">http://www.airbagan.com/ </a> <br>
+                      Air K.B.Z:    <a href="http://www.airkbz.com/ ">http://www.airkbz.com/ </a> <br>
+                     Air Mandalay :   <a href="http://www.airmandalay.com/ ">  http://www.airmandalay.com/ </a><br>
+                        Asian Wings :  <a href="http://www.asianwingsair.com/"> http://www.asianwingsair.com/ </a> <br>
+                        Golden Myanmar :  <a href="https://www.gmairlines.com/">  https://www.gmairlines.com/ </a><br>
+                        Mann Yadanarpon: <a href="https://www.airmyp.com/"> https://www.airmyp.com/ </a> <br>
+                         Yangon Airways: <a href="http://yangonair.com/">  http://yangonair.com/ </a><br>
+                    </p>
+                </div>
+                </p>
+
+            </div>
+
+        </section>
+        <section class="section" id="boat">
+            <div class="item1">
+                
+                    <h1>ရေကြောင်းနဲ့သွားမယ်ဆိုရင်</h1>
+               
+                <p>ပုဂံနဲ့ မန္တလေးကြားမှာ ရေကြောင်းကုမ္ပဏီ အတော်များများက သင်္ဘောတွေ ပြေးဆွဲကြတယ်။ များသောအားဖြင့်
+                    သင်္ဘောတွေက မန္တလေးကနေ မနက်စောစော ထွက်ပြီး ပုဂံကို နေ့ခြင်း ညနေဖက် ရောက်ကြပါတယ်။</p>
+                
+                    <div class="link">
+                    <p>Inland Water Transport (IWT / government-run)<a
+                            href="https://www.iwt.gov.mm/en/Trips%26SailingProgramOfAyeyarwadyDivision">Website</a></p>
+                    <p>Malikha Boat<a href="https://www.myanmarrivercruises.com/">Website</a></p>
+                
+                </div>
+            </div>
+        </section>
+        <section class="section" id="train">
+            <div class="item1">
+               
+                    <h1>ရထားနဲ့သွားမယ်ဆိုရင်</h1>
+                
+                <p>မြန်မာပြည်အတွင်း မီးရထားနဲ့ ခရီးသွားရင် ရထားတွဲတွေက ဟောင်းနွမ်းပြီး ထိန်းသိမ်းပြုပြင်တာက
+                    ညံ့ဖျင်းတဲ့အတွက် ရထားလမ်းချော်ကျနေသလား အောက်မေ့ရအောင် တောက်လျှောက် လှုပ်ခါနေတဲ့ ရှားရှားပါးပါး
+                    အတွေ့အကြုံကို ခံစားရပါလိမ့်မယ်။ ဒါပေမယ့် သင့်မှာ
+                    အချိန်ပိုတွေ သိပ်များနေရင်တော့ သင့်အနေနဲ့ အနှေးစီးရထားရဲ့ အရသာကို ပျော်ပျော်ရွှင်ရွှင်
+                    ခံစားနိုင်ပါတယ်။
+
+                    သင့်အနေနဲ့ ရထားလက်မှတ်တွေကို မီးရထားဘူတာရုံတွေမှာ ရနိုင်ပါတယ်။ လက်မှတ်တွေကို ရထားမထွက်ခင် ၃ ရက်
+                    ကြိုတင်ပြီး ရောင်းချပေးပါတယ်၊ ဒါပေမယ့် အိပ်စင်ဆိုရင် အကုန်မြန်သလို နိုင်ငံတော်
+                    ရုံးပိတ်ရက်အတွင်းဆိုရင်လည်း လက်မှတ် အကုန်မြန်ပါတယ်။
+
+                    ရန်ကုန်မှာ ရထားလက်မှတ်ရုံက ဆာကူရတာဝါနဲ့ မျက်နှာချင်းဆိုင်ဖက်ခြမ်း ဗိုလ်ချုပ်အောင်ဆန်းလမ်းမှာ ရှိတယ်။
+                </p>
+        
+            </div>
+        </section>
+        <section class="section" id="bus">
+            <div class="item1">
+                
+                    <h1>ကားနဲ့သွားမယ်ဆိုရင်</h1>
+              
+                <p>ပုဂံရွှေပြည် အဝေးပြေးကားဂိတ်ဟာ ပုဂံရဲ့ ဆင်ခြေဖုံးမှာ ရှိပြီး ခရီးဝေးသွား ကားတွေနဲ့ ဝန်ဆောင်မှုပေးတဲ့
+                    အဓိက ကားဂိတ် ဖြစ်ပါတယ်။
+
+                    အရင်တုန်းကတော့ ကားတွေဟာ အကုန်နီးပါး လေအေးစက်မပါတဲ့ ကားတွေချည်းလိုလိုပေမယ့် ခုတော့ အဲဒီကားတွေကို
+                    လေအေးစက်ပါတဲ့ မော်ဒယ်အသစ်တွေနဲ့ လဲလှယ် ပြေးဆွဲနေပြီဖြစ်တဲ့အတွက် သင့်အနေနဲ့ သက်သောင့်သက်သာ
+                    ခရီးသွားနိုင်ပါပြီ။ ဇိမ်ခံကားတွေဆိုရင် တစ်တန်းကို သုံးခုံပဲ ထားပါတယ်။ ရန်ကုန်ကနေ ပုဂံအရောက်
+                    အချိန်တို အပန်းပြေ ရပ်နားချိန် အပါအဝင် ၁၀ နာရီဝန်းကျင်ပဲ ကြာပါတယ်။
+
+                    ရန်ကုန်မှာတော့ အောင်မင်္ဂလာ အဝေးပြေးကားဝင်းက မြို့လယ်ခေါင်နဲ့ အတော် အလှမ်းဝေးတဲ့အတွက် သင့်အနေနဲ့
+                    ကားလွတ်မသွားဖို့ သတိထားဖို့ လိုပါတယ်။ ကားရှုပ်တဲ့အချိန်ဆိုရင် မြို့ထဲကနေ ကားဂိတ်ကိုရောက်ဖို့ ၁
+                    နာရီကျော် ကြာတတ်ပါတယ်။
+
+                    ကားလက်မှတ်တွေကို အောင်ဆန်းကွင်းရှိ လက်မှတ်အရောင်းဌာနတွေနဲ့ အင်တာနက် အရောင်းဌာနတွေမှာ ဝယ်ယူလို့
+                    ရပါတယ်။</p>
+                    
+                    <div class="link">
+                    <p>BNF Express :<a href="www.bnfexpress.com">www.bnfexpress.com</a></p>
+                    <p>Shwe Manandalar Express:<a href="http://www.shwemandalarexpress.com/">http://www.shwemandalarexpress.com/</a></p>
+                     <p>Famous Traveller :<a href="https://famoustravellerinternational.com/">https://famoustravellerinternational.com/</a></p>
+                
+                </div>
+            </div>
+        </section>
+        <footer class="footer">© 2025 Bagan Travel Guide. All rights reserved.</footer>
+    </div>
+
+</body>
+
+</html>
